@@ -1,6 +1,8 @@
-<h1>Task column component</h1>
-<ul>
-  {{#each task in filteredList}}
-    <li>{{render 'components/task-column/task' task}}</li>
-  {{/each}}
-</ul>
+{{#draggable-object-target action="onDropTask"}}
+  <h1>Task column component</h1>
+  <ul>
+    {{#each task in filteredList}}
+      <li>{{render 'components/task-column/task' task}}</li>
+    {{/each}}
+  </ul>
+{{/draggable-object-target}}

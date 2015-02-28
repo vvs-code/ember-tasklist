@@ -1,1 +1,3 @@
-[{{model.status}} {{model.id}}] - {{link-to model.title 'tasklist.edit' model.id}}
+{{#draggable-object content=this}}
+    [{{model.status}} {{model.id}}] - {{link-to model.title 'tasklist.edit' model.id}}
+{{/draggable-object}}
