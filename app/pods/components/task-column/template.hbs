@@ -1,5 +1,5 @@
 {{#draggable-object-target action="onDropTask"}}
-  <h1>Task column component</h1>
+  <h1>Tasks in status '{{status}}'</h1>
   <ul>
     {{#each task in filteredList}}
       <li>{{render 'components/task-column/task' task}}</li>
