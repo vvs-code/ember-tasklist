@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('tasklist', {path: '/'}, function() {
     this.route('new');
+    this.route('view', { path: ':task_id/view' });
+    this.route('edit', { path: ':task_id/edit' });
   });
 });
 
