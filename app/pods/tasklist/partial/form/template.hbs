@@ -1,7 +1,10 @@
 <form>
+    <h2>{{errorMessage}}</h2>
     <label>Title: {{input value=model.title}}</label><br />
     <label for="new-task-description">Description:</label>
     {{textarea value=model.description id='new-task-description'}}<br />
     <lablel for="new-task-status">Status:</lablel>
     {{view 'select' content=taskStatuses selection=model.status}}
+    <button {{action 'cancel'}}>Cancel</button>
+    <button {{action 'save'}}>Save</button>
 </form>
