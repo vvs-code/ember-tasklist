@@ -1,0 +1,9 @@
+<h1>List of tasks</h1>
+<ul id="todo-list">
+  {{#each task in model}}
+      <li>
+          <input type="checkbox" class="toggle">
+          <label>{{task.title}}</label><button class="destroy"></button>
+      </li>
+  {{/each}}
+</ul>
