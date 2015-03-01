@@ -5,8 +5,8 @@ export default Ember.Route.extend({
     return this.store.createRecord('task');
   },
   deactivate: function() {
-    var model = this.modelFor('tasklist/new');
-
+    var model = this.modelFor('tasklist.new');
+    
     if(model.get('isNew')) {
       model.destroy();
     }
