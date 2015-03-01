@@ -1,5 +1,11 @@
 <form class="form-horizontal task-form">
-    <h2>{{errorMessage}}</h2>
+    {{#if errorMessage}}
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+          {{errorMessage}}
+        </div>
+    {{/if}}
 
     <!-- Text input-->
     <div class="form-group">

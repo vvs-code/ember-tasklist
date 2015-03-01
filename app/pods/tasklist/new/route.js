@@ -6,9 +6,11 @@ export default Ember.Route.extend({
   },
   deactivate: function() {
     var model = this.modelFor('tasklist.new');
-    
+
     if(model.get('isNew')) {
-      model.destroy();
+      model.destroyRecord();
     }
+
+    this.controller.resetError();
   }
 });
