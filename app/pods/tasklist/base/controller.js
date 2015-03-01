@@ -16,6 +16,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel: function() {
+      this.get('model').rollback();
       this.transitionTo('tasklist');
       return false;
     }
