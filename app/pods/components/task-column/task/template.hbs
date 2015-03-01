@@ -1,5 +1,6 @@
 {{#draggable-object content=this}}
   <div class="task-card">
+      <button {{action 'removeTask' model}} type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       [{{model.id}}] - {{link-to model.title 'tasklist.edit' model.id}}
   </div>
 {{/draggable-object}}

@@ -17,9 +17,12 @@ export default Ember.Component.extend({
   classNameBindings: ['statusClassName'],
   actions: {
     onDropTask: function(obj) {
-      var task = obj.model;
+      var task = obj.get('model');
       task.set('status', this.get('status'));
       task.save();
+    },
+    removeTask: function(task) {
+      task.set('status', 'removed').save();
     }
   }
 });

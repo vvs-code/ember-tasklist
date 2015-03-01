@@ -34,3 +34,21 @@ body {
     list-style: none;
     padding: 5px;
 }
+
+.task-card {
+    position: relative;
+    min-height: 35px;
+    border: 1px solid lightgrey;
+    margin: 3px;
+}
+
+.task-card .close {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.task-card:hover .close {
+    visibility: visible;
+}
