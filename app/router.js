@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('new');
     this.route('view', { path: ':task_id/view' });
     this.route('edit', { path: ':task_id/edit' });
+    this.route('trash', {path: '/trash'});
   });
 });
 
