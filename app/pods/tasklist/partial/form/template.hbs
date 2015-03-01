@@ -1,10 +1,36 @@
-<form>
+<form class="form-horizontal task-form">
     <h2>{{errorMessage}}</h2>
-    <label>Title: {{input value=model.title}}</label><br />
-    <label for="new-task-description">Description:</label>
-    {{textarea value=model.description id='new-task-description'}}<br />
-    <lablel for="new-task-status">Status:</lablel>
-    {{view 'select' content=taskStatuses selection=model.status}}
-    <button {{action 'cancel'}}>Cancel</button>
-    <button {{action 'save'}}>Save</button>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="task-title">Title</label>
+        <div class="col-md-8">
+            {{input id='task-title' class='form-control input-md' placeholder='Task title' value=model.title autofocus='autofocus'}}
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="text-description">Description</label>
+        <div class="col-md-8">
+            {{textarea value=model.description id='task-description' class='form-control'}}
+        </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="task-status">Select Basic</label>
+        <div class="col-md-8">
+            {{view 'select' content=taskStatuses selection=model.status id='task-status' class='form-control'}}
+        </div>
+    </div>
+
+    <!-- Button (Double) -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="button1id">&nbsp;</label>
+        <div class="col-md-8">
+            <button  {{action 'save'}} class="btn btn-success">Save</button>
+            <button  {{action 'cancel'}} class="btn btn-primary">Cancel</button>
+        </div>
+    </div>
 </form>

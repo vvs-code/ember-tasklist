@@ -40,6 +40,7 @@ body {
     min-height: 35px;
     border: 1px solid lightgrey;
     margin: 3px;
+    cursor: pointer;
 }
 
 .task-card .close {
@@ -51,4 +52,8 @@ body {
 
 .task-card:hover .close {
     visibility: visible;
+}
+
+.task-form {
+    width: 750px;
 }
