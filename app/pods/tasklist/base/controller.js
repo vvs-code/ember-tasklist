@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   taskStatuses: ['new', 'in process', 'done'],
   isValid: Ember.computed.notEmpty('model.title'),
+  globalData: 'GLOBAL DATA',
   actions: {
     save: function() {
       if(this.get('isValid')) {
