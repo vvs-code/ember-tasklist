@@ -1,6 +1,6 @@
 {{#draggable-object-target action="onDropTask"}}
-  <h1>Tasks in status '{{status}}'</h1>
-  <ul>
+  <h2 class="column-title">in status '{{status}}'</h2>
+  <ul class="column-list">
     {{#each task in filteredList}}
       <li>{{render 'components/task-column/task' task}}</li>
     {{/each}}

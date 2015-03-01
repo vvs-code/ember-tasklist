@@ -1,0 +1,36 @@
+html,
+body,
+body > .ember-view,
+.task-columns,
+.task-column,
+.task-column > .draggable-object-target {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    padding: 60px 10px 10px 10px;
+}
+
+.task-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.task-column {
+    width: 33%;
+    border: 5px solid #204d74;
+}
+
+.task-column .column-title {
+    margin: 5px;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.column-list {
+    list-style: none;
+    padding: 5px;
+}

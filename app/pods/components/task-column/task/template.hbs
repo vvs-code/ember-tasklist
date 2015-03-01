@@ -1,3 +1,5 @@
 {{#draggable-object content=this}}
-    [{{model.status}} {{model.id}}] - {{link-to model.title 'tasklist.edit' model.id}}
+  <div class="task-card">
+      [{{model.id}}] - {{link-to model.title 'tasklist.edit' model.id}}
+  </div>
 {{/draggable-object}}
