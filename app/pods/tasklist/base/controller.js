@@ -19,6 +19,9 @@ export default Ember.Controller.extend({
       this.get('model').rollback();
       this.transitionTo('tasklist');
       return false;
+    },
+    removeTask: function() {
+      this.get('model').set('status', 'removed').save();
     }
   }
 });
