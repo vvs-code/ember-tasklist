@@ -1,1 +1,27 @@
-{{outlet}}
+<div class="panel panel-default tasklist-trash">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Removed tasks</div>
+    <div class="panel-body">
+        <p>
+            <button {{action 'clearTrash'}} type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> Clear trash
+            </button>
+        </p>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titile</th>
+            <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each task in model}}
+            <tr><td>{{task.id}}</td><td>{{task.title}}</td><td>{{task.description}}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+</div>
